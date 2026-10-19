@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Помощник по вублинам — My Singing Monsters</title>
+<meta name="description" content="Помощник по вублинам My Singing Monsters: порядок пробуждения, рецепты островов, цепочка +">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <!-- Шапка приложения -->
+  <header class="app-header">
+    <h1>Помощник по вублинам</h1>
+    <div class="app-subtitle">
+      <strong>My Singing Monsters</strong> · яйца вублинов не вылупляй — <strong>zap-ом в статую</strong>; окно яиц <strong>2–14 дней</strong>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Вкладка: Порядок -->
+    <section id="tab-order" class="tab active" aria-labelledby="btn-order">
+      <div id="order-list"></div>
+    </section>
+
+    <!-- Вкладка: Острова -->
+    <section id="tab-islands" class="tab" aria-labelledby="btn-islands">
+      <div class="island-switcher" id="island-switcher" role="tablist" aria-label="Выбор острова"></div>
+      <div id="island-content"></div>
+    </section>
+
+    <!-- Вкладка: Цепочка + -->
+    <section id="tab-chain" class="tab" aria-labelledby="btn-chain">
+      <div class="chain-intro">
+        Каждый вублин даёт бонус «+» другому. Поставь дающего «+» рядом с получателем на <strong>острове Вублинов</strong> — выступления будут чаще и доход выше. Ниже — полный цикл из 19 связей.
+      </div>
+      <div id="chain-list" class="chain-list"></div>
+    </section>
+  </main>
+
+  <!-- Нижние вкладки -->
+  <nav class="bottom-nav" aria-label="Навигация">
+    <button class="tab-btn active" id="btn-order" data-tab="order" aria-selected="true">
+      <span class="ico">①</span>
+      Порядок
+    </button>
+    <button class="tab-btn" id="btn-islands" data-tab="islands" aria-selected="false">
+      <span class="ico">◈</span>
+      Острова
+    </button>
+    <button class="tab-btn" id="btn-chain" data-tab="chain" aria-selected="false">
+      <span class="ico">⊕</span>
+      Цепочка +
+    </button>
+  </nav>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
